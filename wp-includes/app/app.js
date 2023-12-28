@@ -53,7 +53,11 @@ const App = (function () {
         localStorage.removeItem("formstep");
       },
       append: (value) => {
-        const current = App.storage.get() || [];
+        //let current = App.storage.get() || [];
+        let current = [];
+        if(App.storage.get() != null)
+          current = App.storage.get();
+        
         current.push(value);
         App.storage.set(JSON.stringify(current));
       },

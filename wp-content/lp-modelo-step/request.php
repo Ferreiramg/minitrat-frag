@@ -6,9 +6,9 @@ include_once __DIR__ . "/app.php";
 
 
 $steps = [
-    'R' => 'residencial',
-    'C' => 'comercial',
-    'I' => 'empresa',
+    'R' => 'modelo-ideal-residencial',
+    'C' => 'modelo-ideal-comercial',
+    'I' => 'modelo-ideal-empresa',
 ];
 
 function validateCsrfToken()
@@ -49,7 +49,7 @@ try {
 
             echo json_encode([
                 'success' => true,
-                'next' => $steps[$post['tipo_empree']] ?? 'cadastro-final',
+                'next' => $steps[$post['tipo_empree']] ?? 'modelo-ideal-final',
                 'data' => $post,
                 'id' => $id,
             ]);

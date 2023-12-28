@@ -9,11 +9,12 @@ require_once __DIR__ . "/app.php";
 function mailtrap($phpmailer)
 {
     $phpmailer->isSMTP();
-    $phpmailer->Host = 'sandbox.smtp.mailtrap.io';
+    $phpmailer->Host = 'mail.minitrat.com.br';
     $phpmailer->SMTPAuth = true;
-    $phpmailer->Port = 2525;
-    $phpmailer->Username = '6f69441906f23f';
-    $phpmailer->Password = 'd5657604883d56';
+    $phpmailer->Port = 587; // Use a porta apropriada para TLS
+    $phpmailer->SMTPSecure = ''; // Defina como vazio para desativar o uso de SSL/TLS
+    $phpmailer->Username = 'modelo.ideal@minitrat.com.br';
+    $phpmailer->Password = 'XL8^cU=bE#0f';
 }
 
 add_action('phpmailer_init', 'mailtrap');
@@ -42,7 +43,7 @@ try {
 
     $headers = array(
         'Content-Type: text/html; charset=UTF-8',
-        'From: Seu Nome <luis@email.com>',
+        'From: Minitrat | Modelo Ideal <modelo.ideal@minitrat.com.br>',
     );
 
     $pdo = Model::connect();

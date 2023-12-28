@@ -20,8 +20,8 @@ class Model
             $db_name = DB_NAME;
             $host = DB_HOST;
 
-            $conn = new PDO("mysql:host={$host};dbname={$db_name}", DB_USER, DB_PASSWORD);
-            $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $conn = new \PDO("mysql:host={$host};dbname={$db_name}", DB_USER, DB_PASSWORD);
+            $conn->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
 
             return $conn;
         } catch (\Exception $th) {
@@ -51,7 +51,7 @@ class Solicitacao
 
     private $columns = ["tipo_empree", "fase_empree", "padrao", "modelo_empree", "total_empree", "distancia_ponto", "turno_um", "turno_dois", "turno_tres", "nome", "telefone", "email", "uf", "cidade", "receber_notificacao", "created_at"];
 
-    public function __construct(PDO $pdo)
+    public function __construct(\PDO $pdo)
     {
         $this->conn = $pdo;
     }
@@ -90,7 +90,7 @@ class Solicitacao
         $stmt = $this->conn->prepare("SELECT * FROM wp_mi_solicitacoes where id=?");
 
         if ($stmt->execute([$id])) {
-            return $stmt->fetch(PDO::FETCH_ASSOC);
+            return $stmt->fetch(\PDO::FETCH_ASSOC);
         }
 
         throw new \Exception("Falha ao buscar. tente novamente", 400);
