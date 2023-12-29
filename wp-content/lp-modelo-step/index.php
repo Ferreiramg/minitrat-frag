@@ -102,6 +102,11 @@ $csrf_token = Model::csrfToken();
 <script src="/wp-includes/app/assets/bootstrap.js"></script>
 
 <script>
+
+  window.addEventListener('load', () => {
+    App.storage.clear();
+  });
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
 
