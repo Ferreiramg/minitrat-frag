@@ -69,7 +69,7 @@
 <body>
     <div class="container">
         <div class="logo">
-            <img width="150" height="120" src="/wp-includes/app/assets/mail-logo.png" class="thumb-img" alt="Minitrat by ECTAS e ACQUALIMP">
+            <img width="150" height="120" src="https://minitrat.com.br/wp-includes/app/assets/mail-logo.png" class="thumb-img" alt="Minitrat by ECTAS e ACQUALIMP">
         </div>
         <div class="message">
             <p><strong>Nova Solicitação</strong></p>
