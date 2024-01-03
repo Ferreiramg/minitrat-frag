@@ -41,6 +41,7 @@ try {
 
         $post = filter_input_array(INPUT_POST, FILTER_DEFAULT, true);
 
+        $tipo = $post['tipo_empree'] ?? 'err';
 
         if (isset($post['id']) && intval($post['id']) > 0) {
             $id = $post['id'];
@@ -49,7 +50,7 @@ try {
 
             echo json_encode([
                 'success' => true,
-                'next' => $steps[$post['tipo_empree']] ?? 'modelo-ideal-final',
+                'next' => $steps[$tipo] ?? 'modelo-ideal-final',
                 'data' => $post,
                 'id' => $id,
             ]);
@@ -62,7 +63,7 @@ try {
 
         echo json_encode([
             'success' => true,
-            'next' => $steps[$post['tipo_empree']],
+            'next' => $steps[$tipo] ?? null,
             'data' => $post,
             'id' => $id,
         ]);
