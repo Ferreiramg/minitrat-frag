@@ -67,7 +67,7 @@ $csrf_token = Model::csrfToken();
               <h3 class="card-title">Qual o tipo do seu empreendimento?</h3>
 
               <select class="form-control form-control-lg" id="tipo" name="tipo_empree" style="max-width:400px" required>
-                <option value="R">Residêncial</option>
+                <option value="R">Residencial</option>
                 <option value="C">Comercial</option>
                 <option value="I">Industrial</option>
               </select>

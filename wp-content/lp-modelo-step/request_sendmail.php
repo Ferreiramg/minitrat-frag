@@ -40,7 +40,7 @@ $map_keys = [
     'padrao' => 'Padrão',
     'modelo_empree' => 'Modelo de empreendimento',
     'total_empree' => 'Total de empreendimentos',
-    'distancia_ponto' => 'Distância do ponto de energia',
+    'distancia_ponto' => 'Comprimento Total da Rede Coletora (m)',
     'turno_um' => 'Turno 1',
     'turno_dois' => 'Turno 2',
     'turno_tres' => 'Turno 3',
@@ -67,12 +67,12 @@ $map_keys_json = [
 
 ];
 $map_empree = [
-    'R' => 'Residêncial',
+    'R' => 'Residencial',
     'C' => 'Comercial',
     'I' => 'Industrial',
 ];
 $map_fase_empree = [
-    'I' => 'Inícial',
+    'I' => 'Inicial',
     'M' => 'Intermediária',
     'F' => 'Final',
 ];
@@ -169,7 +169,7 @@ try {
 
         $html = ob_get_clean();
         //sendmail
-        wp_mail("modelo.ideal@minitrat.com.br", 'Nova Solicitação de Serviço', $html, $headers);
+        wp_mail("contato@mintrat.com.br", 'Nova Solicitação de Serviço', $html, $headers);
     }
 } catch (\Throwable $th) {
     http_response_code(500);

@@ -53,7 +53,7 @@ $csrf_token = Model::csrfToken();
     <main>
 
         <div class="_header1">
-            <h2 style="position: absolute;bottom: 10%;left: 30%;"><span class="badge badge-warning text-white">Residêncial</span></h2>
+            <h2 style="position: absolute;bottom: 10%;left: 30%;"><span class="badge badge-warning text-white">Residencial</span></h2>
         </div>
 
         <div class="container">
