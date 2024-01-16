@@ -74,7 +74,12 @@ $csrf_token = Model::csrfToken();
 
                         <div class="form-group d-flex" style="flex-direction: column;justify-content: center;align-items: center;">
                             <h3 class="card-title">Qual o tipo de empreendimento?</h3>
-                            <input type="text" class="form-control form-control-lg" name="modelo_empree" placeholder="Ex: casa" style="max-width:400px" required>
+                            <select class="form-control form-control-lg" name="modelo_empree" style="max-width:400px" required>
+                                <option value="">Selecione uma Opção</option>
+                                <option value="Casas">Casas</option>
+                                <option value="Apartamentos">Apartamentos</option>
+                                <option value="Lotes">Lotes</option>
+                            </select>
                         </div>
                         <div class="form-group d-flex" style="flex-direction: column;justify-content: center;align-items: center;">
                             <h3 class="card-title">Qual o número total de Casas / Aptos / Lotes?</h3>
