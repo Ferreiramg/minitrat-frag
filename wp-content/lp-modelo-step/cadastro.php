@@ -238,8 +238,7 @@ $csrf_token = Model::csrfToken();
                 method: 'GET',
                 headers: {
                   'X-CSRF-Token': '<?= $csrf_token ?>'
-                },
-                body: data
+                }
               });
 
             App.storage.clear();
