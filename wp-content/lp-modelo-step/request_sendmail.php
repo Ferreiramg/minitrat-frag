@@ -169,7 +169,7 @@ try {
 
         $html = ob_get_clean();
         //sendmail
-        wp_mail("contato@mintrat.com.br", 'Nova Solicitação de Serviço', $html, $headers);
+        wp_mail("fernando@mintrat.com.br;joao@mintrat.com.br", 'Nova Solicitação de Serviço', $html, $headers);
     }
 } catch (\Throwable $th) {
     http_response_code(500);

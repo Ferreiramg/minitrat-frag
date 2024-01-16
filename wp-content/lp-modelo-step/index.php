@@ -76,7 +76,7 @@ $csrf_token = Model::csrfToken();
             <div class="form-group d-flex" style="flex-direction: column;justify-content: center;align-items: center;">
               <h3 class="card-title">Qual a fase do empreendimento?</h3>
               <select class="form-control form-control-lg" id="fase" name="fase_empree" style="max-width:400px" required>
-                <option value="I">Inícial</option>
+                <option value="I">Inicial</option>
                 <option value="M">Intermediária</option>
                 <option value="F">Final</option>
               </select>
