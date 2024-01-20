@@ -234,7 +234,7 @@ $csrf_token = Model::csrfToken();
         .then(res => {
           if (res.success) {
 
-            fetch(`/wp-content/lp-modelo-step/request_sendmail.php?id=${res.id}`, {
+            fetch(`/wp-content/lp-modelo-step/request_api.php?id=${res.id}`, {
                 method: 'GET',
                 headers: {
                   'X-CSRF-Token': '<?= $csrf_token ?>'
