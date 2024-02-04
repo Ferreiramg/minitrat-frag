@@ -6,18 +6,18 @@ require_once dirname(dirname(__DIR__)) . '/wp-load.php';
 
 require_once __DIR__ . "/app.php";
 
-function mailtrap($phpmailer)
+/* function mailtrap($phpmailer)
 {
     $phpmailer->isSMTP();
-    $phpmailer->Host = 'mail.minitrat.com.br';
+    $phpmailer->Host = '';
     $phpmailer->SMTPAuth = true;
     $phpmailer->Port = 587; // Use a porta apropriada para TLS
     $phpmailer->SMTPSecure = ''; // Defina como vazio para desativar o uso de SSL/TLS
-    $phpmailer->Username = 'modelo.ideal@minitrat.com.br';
-    $phpmailer->Password = 'XL8^cU=bE#0f';
+    $phpmailer->Username = '';
+    $phpmailer->Password = '=#f';
 }
 
-add_action('phpmailer_init', 'mailtrap');
+add_action('phpmailer_init', 'mailtrap') */
 
 function validateCsrfToken()
 {
@@ -60,7 +60,7 @@ try {
 
         if ($solicitacao->update($post, $id)) {
 
-            wp_mail($post['email'], 'A Minitrat agradece o seu interesse!', $content, $headers);
+           // wp_mail($post['email'], 'A Minitrat agradece o seu interesse!', $content, $headers);
 
             echo json_encode([
                 'success' => true,
